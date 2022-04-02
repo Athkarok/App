@@ -13,7 +13,6 @@ export default async function home() {
   wheelFunctionalty();
   radio();
   prayerTimes();
-  downloadApp();
 }
 
 
