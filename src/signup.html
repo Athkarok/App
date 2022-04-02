@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Manifest -->
+  <link rel="manifest" href="./manifest.json">
+  <!-- Semantic CSS -->
+  <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
+  <title>Athkarok - أذكارك</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YBT0PXQGLT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-YBT0PXQGLT');
+  </script>
+</head>
+
+<body>
+  <!-- Mobile nav -->
+  <nav class="mobile-nav">
+    <div class="flex flex-jc-se flex-ai-c">
+      <a href="/" id="nav-home" class="flex flex-jc-c flex-ai-c">
+        <span class="icon-container"><img id="icon-home" width="25px" src="./images/nav-icons/icon-home.svg"
+            alt=""></span>
+        <span class="font-s font-w-m">الرئيسية</span>
+      </a>
+      <a href="athkarok.html" id="nav-zikr" class="flex flex-jc-c flex-ai-c">
+        <span class="icon-container"><img id="icon-zikr" width="25px" src="./images/nav-icons/icon-zikr.svg"
+            alt=""></span>
+        <span class="font-s font-w-m">أذكارك</span>
+      </a>
+      <a href="settings.html" id="nav-share" class="flex flex-jc-c flex-ai-c">
+        <span class="icon-container"><img id="icon-settings" width="25px" src="./images/nav-icons/icon-settings.svg"
+            alt=""></span>
+        <span class="font-s font-w-m">الإعدادات</span>
+      </a>
+    </div>
+  </nav>
+
+  <header class="desk-nav-container">
+    <nav class="desk-nav">
+      <div class="nav-wrap">
+        <a tabindex="-1" href="/" class="desk-nav-logo"><img src="./images/logo.svg" alt=""></a>
+
+        <div class="desk-nav-links flex flex-jc-sb">
+          <div class="nav-btns">
+            <a active="home" href="/" class="">الرئيسية</a>
+            <a active="athkarok" href="athkarok.html" id="azkarok-nav" class="">أذكارك</a>
+            <a active="settings" href="settings.html" class="">الإعدادات</a>
+          </div>
+          <div class="sign-btns">
+            <a id="signin" href="signin.html">تسجيل الدخول</a>
+            <a id="signup" href="signup.html"><span>/</span> التسجيل</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="signUpMain" class="container">
+    <div class="form-cont">
+      <form id="signupForm" class="ui form">
+
+        <h2 class="ui dividing header">إنشاء حساب</h2>
+        <div class="ui error message">
+          <div class="header">خطأ!</div>
+          <p></p>
+        </div>
+        <div class="field">
+          <label>الإسم*</label>
+          <div class="two fields">
+            <div class="field">
+              <input type="text" id="fname" name="first_name" placeholder="الإسم الأول">
+            </div>
+            <div class="field">
+              <input type="text" id="lname" name="last_name" placeholder="اسم العائلة">
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>البريد الإلكتروني*</label>
+          <input type="text" id="email" name="email" placeholder="example@athkarok.com">
+        </div>
+
+        <div class="two fields">
+          <div class="field">
+            <label>اسم المستخدم*</label>
+            <input type="text" id="user_name" name="user_name" placeholder="heuman">
+          </div>
+          <div class="field">
+            <label>رقم الهاتف</label>
+            <input type="text" id="phone_number" name="phone_number" placeholder="ex. 0105552222">
+          </div>
+        </div>
+
+        <div class="field">
+          <label>كلمة المرور*</label>
+          <div class="two fields">
+            <div class="field">
+              <input type="password" id="password" name="password" placeholder="كلمة المرور">
+            </div>
+            <div class="field">
+              <input type="password" id="password2" name="password" placeholder="تأكيد كلمة المرور">
+            </div>
+          </div>
+        </div>
+
+
+        <button class="ui button" type="submit">إنشاء حساب</button>
+      </form>
+    </div>
+
+    </div>
+  </main>
+
+
+  <div style="position: fixed;top: 0;right: 0; width: 100%;height: 100vh;" class="app-loader">
+    <div class="app-loader-content">
+      <img src="./images/logo.svg" alt="">
+      <div class="progress">
+        <span class="progress-inner"></span>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

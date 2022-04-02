@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Manifest -->
+    <link rel="manifest" href="./manifest.json">
+    <!-- Semantic CSS -->
+    <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+    <title>Athkarok - أذكارك</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YBT0PXQGLT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-YBT0PXQGLT');
+    </script>
+</head>
+
+<body>
+    <!-- Mobile nav -->
+    <nav class="mobile-nav">
+        <div class="flex flex-jc-se flex-ai-c">
+            <a href="/" id="nav-home" class="flex flex-jc-c flex-ai-c">
+                <span class="icon-container"><img id="icon-home" width="25px" src="./images/nav-icons/icon-home.svg"
+                        alt=""></span>
+                <span class="font-s font-w-m">الرئيسية</span>
+            </a>
+            <a href="athkarok.html" id="nav-zikr" class="flex flex-jc-c flex-ai-c">
+                <span class="icon-container"><img id="icon-zikr" width="25px" src="./images/nav-icons/icon-zikr.svg"
+                        alt=""></span>
+                <span class="font-s font-w-m">أذكارك</span>
+            </a>
+            <a href="settings.html" id="nav-share" class="flex flex-jc-c flex-ai-c">
+                <span class="icon-container"><img id="icon-settings" width="25px"
+                        src="./images/nav-icons/icon-settings.svg" alt=""></span>
+                <span class="font-s font-w-m">الإعدادات</span>
+            </a>
+        </div>
+    </nav>
+
+    <header class="desk-nav-container">
+        <nav class="desk-nav">
+            <div class="nav-wrap">
+                <a tabindex="-1" href="/" class="desk-nav-logo"><img src="./images/logo.svg" alt=""></a>
+
+                <div class="desk-nav-links flex flex-jc-sb">
+                    <div class="nav-btns">
+                        <a active="home" href="/" class="">الرئيسية</a>
+                        <a active="athkarok" href="athkarok.html" id="azkarok-nav" class="">أذكارك</a>
+                        <a active="settings" href="settings.html" class="">الإعدادات</a>
+                    </div>
+                    <div class="sign-btns">
+                        <a id="signin" href="signin.html">تسجيل الدخول</a>
+                        <a id="signup" href="signup.html"><span>/</span> التسجيل</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="settingsMain" class="container">
+        <div class="setting-list">
+            <ul>
+                <li id="color-theem-btn" class="option font-s">تغيير نمط الألوان</li>
+                <li id="font-size-btn" class="option font-s">تغيير حجم الخط</li>
+                <a href="https://github.com/abdullahsayed30/Athkarok/issues" target="_blank" rel="noopener noreferrer">
+                    <li class="report option font-s">الإبلاغ عن مشكلة</li>
+                </a>
+                <li id="about-app-btn" class="option font-s">عن أذكارك</li>
+                <li id="contact-btn" class="option font-s">تواصل معنا</li>
+            </ul>
+        </div>
+        <!-- ------Hidden Stuff-------- -->
+        <!-- Color Theem -->
+        <div class="change-color-theem-op slide">
+            <h2 class="font-m">نمط الألوان</h2>
+            <div class="option font-s">
+                <input type="radio" name="theem" id="auto">
+                <label id="auto-mode" for="auto">تلقائي</label>
+            </div>
+            <div class="option font-s">
+                <input type="radio" name="theem" id="light">
+                <label id="light-mode" for="light">النمط الفاتح</label>
+            </div>
+            <div class="option font-s">
+                <input type="radio" name="theem" id="dark">
+                <label id="dark-mode" for="dark">النمط الداكن</label>
+            </div>
+            <div id="color-theem-back" class="back option font-s">عودة</div>
+        </div>
+        <!-- Font Size -->
+        <div class="change-font-size-op slide">
+            <h2 class="font-m">حجم الخط</h2>
+            <div class="option">
+                <input type="radio" name="font" id="s">
+                <label id="s-size" for="s">حجم صغير</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="font" id="m">
+                <label id="m-size" for="m">حجم متوسط</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="font" id="l">
+                <label id="l-size" for="l">حجم كبير</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="font" id="xl">
+                <label id="xl-size" for="xl">حجم ضخم</label>
+            </div>
+            <div id="font-size-back" class="back option font-s">عودة</div>
+        </div>
+        <!-- About Athkarok -->
+        <div class="about-app-op slide">
+            <h2 class="font-m">عن أذكارك</h2>
+            <p class="font-s">أذكارك هو تطبيق مجاني يمكنك من تصفح الأوراد اليومية للمسلم ويساعدك على المحافظة عليها
+                يوميًا ، يمكنك التطبيق من عرض مواقيت الصلاة ، سماع اذاعة القرآن الكريم والمزيد.</p>
+            <p class="font-s">التطبيق مجاني بالكامل لاتنسانا من صالح دعائك.</p>
+            <button id="share-app">مشاركة التطبيق</button>
+            <div id="about-app-back" class="back option">عودة</div>
+        </div>
+        <!-- Contact With Us -->
+        <div class="contact-op slide">
+            <h2 class="font-m">تواصل معنا </h2>
+            <form method="POST" id="sugForm" data-netlify="true">
+                <div class="sug-menu">
+                    <select id="role" class="sug-menu-select" name="role">
+                        <option selected disabled value="">سبب التواصل</option>
+                        <option value="opinion">آراء</option>
+                        <option value="suggestion">مقترحات</option>
+                        <option value="techIssue">مشاكل فنية</option>
+                    </select>
+                    <div class="sug-menu-icons">
+                        <span class="barrier"></span>
+                        <img src="./images/settings-icons/arrow.svg" alt="">
+                    </div>
+                </div>
+                <div class="inputs-cont flex flex-ai-c flex-jc-sb flex-dir-c">
+                    <input type="text" name="name" id="" placeholder="اسمك/ي الكريم(إختياري)">
+                    <textarea id="" name="message" maxlength="3000" placeholder="يسعدنا تواصلكم معنا.."
+                        rows="7"></textarea>
+                </div>
+                <div class="btn-cont flex flex-jc-sa flex-ai-c">
+                    <input class="submit btn font-w-b" type="submit" value="إرسال">
+
+                    <div id="contact-back" class="btn font-s font-w-b">عودة</div>
+                </div>
+            </form>
+            <p class="font-s"></p>
+        </div>
+        <div id="copy-right">
+            <span>©أذكارك 2021، لايوجد حقوق على أي مادة مادة مستخدمة ، يمكنك إعادة استخدامها كما تشاء دون العودة
+                إلينا.</span>
+        </div>
+    </main>
+
+
+
+    <div style="position: fixed;top: 0;right: 0; width: 100%;height: 100vh;" class="app-loader">
+        <div class="app-loader-content">
+            <img src="./images/logo.svg" alt="">
+            <div class="progress">
+                <span class="progress-inner"></span>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

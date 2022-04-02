@@ -1,0 +1,110 @@
+:root {
+  // Colors main theem
+  --primary: #dddddd;
+  // card counter panel
+  --primary-li-4: #e7e7e7;
+  // home cards and nav mobile
+  --primary-li-5: #eaeaea;
+  --secondary: #222831;
+  // done adding text
+  --secondary-li-40: #7b8ba4;
+  // card borders and more borders
+  --secondary-li-50: #99a6b9;
+  // zikr short btn borders
+  --secondary-li-65: #c7ced8;
+  // zikr short btn fuocs
+  --secondary-li-75: #c7ced8;
+  --text-color: #222831de;
+  --white: #ededed;
+  // span h2 done text
+  --white-dr-15: #c7c7c7;
+  --blue: #2b3f57;
+  --green: #007d52;
+  --option-color: #222831;
+  --option-hover: #b7bac2;
+  --option-border: var(--secondary-li-50);
+  --thumb-hover: #2c333f;
+  --selection: #007e85a9;
+  --wheel-color: #ededed;
+  --cir-stroke: #c4c4c4;
+  --cir-stroke-active: var(--green);
+  --desk-nav-color: var(--secondary);
+  --mob-nav-color: var(--primary-li-5);
+  --red: #f05454;
+  --yellow: #d4ac29;
+  --dark-white: #999999;
+  --input: var(--white);
+}
+
+// Colors dark theem
+
+.dark-mode {
+  // Main Color hsl(216, 18%, 16%)
+  // Colors main theem
+  --primary: hsl(216, 18%, 13%);
+  // card counter panel
+  --primary-li-4: hsl(216, 18%, 17%);
+  // home cards and nav mobile
+  --primary-li-5: hsl(216, 18%, 16%);
+  --secondary: #dddddd;
+  // done adding text
+  --secondary-li-40: #7b8ba4;
+  // card borders and more borders
+  --secondary-li-50: hsl(216, 18%, 30%);
+  // zikr short btn borders
+  --secondary-li-65: hsl(216, 18%, 20%);
+  // zikr short btn fuocs
+  --secondary-li-75: hsl(216, 18%, 20%);
+  --text-color: #dddddd;
+  --white: #ededed;
+  // span h2 done text
+  --white-dr-15: #c7c7c7;
+  --blue: hsl(213, 34%, 10%);
+  --green: hsl(159, 100%, 20%);
+  --option-color: #222222;
+  --option-hover: hsl(44, 8%, 75%);
+  --option-border: #222222;
+  --thumb-hover: #2c333f;
+  --selection: #007e85a9;
+  --wheel-color: #d2d2d2;
+  --cir-stroke: hsl(216, 18%, 12%);
+  --cir-stroke-active: var(--green);
+  --desk-nav-color: hsl(216, 18%, 16%);
+  --mob-nav-color: hsl(216, 18%, 16%);
+  --red: #f05454;
+  --yellow: #d4ac29;
+  --dark-white: #999999;
+  --input: var(--primary-li-4)
+}
+
+.invert {
+  filter: invert(1) !important;
+}
+
+// Fonts
+
+// Questv1 bold
+@font-face {
+  font-family: Questv1;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../font_faces/Questv1-Bold.otf);
+  src: url(../font_faces/Questv1-Bold.ttf);
+}
+
+// Questv1 Regular
+@font-face {
+  font-family: Questv1;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../font_faces/Questv1-Regular.otf);
+  src: url(../font_faces/Questv1-Regular.ttf);
+}
+
+$primary-font: "Questv1", sans-serif;
+
+// Font Sizes
+$font-xl: 4em;
+$font-l: 2.5em;
+$font-m: 1.5625em; //25px
+$font-s: 1.125em; // 18px

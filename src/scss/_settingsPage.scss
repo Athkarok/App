@@ -1,0 +1,288 @@
+#settingsMain {
+  position: relative;
+  user-select: none;
+  overflow-x: hidden;
+  min-height: 700px;
+
+  .option {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    border-bottom: 1px solid var(--option-border);
+    color: var(--option-color);
+    &:hover {
+      background-color: var(--option-hover);
+      border-radius: 5px;
+    }
+  }
+  .slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 90px;
+    left: -120%;
+    background-color: var(--primary);
+  }
+  .back {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    &::before {
+      content: "";
+      position: absolute;
+      right: 2%;
+      width: 25px;
+      height: 25px;
+      transform: rotate(0.5turn);
+      background-image: url(../images/settings-icons/arrow.svg);
+      background-size: cover;
+    }
+  }
+
+  .setting-list {
+    position: relative;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 1rem;
+      li {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 2%;
+          width: 25px;
+          height: 25px;
+          background-image: url(../images/settings-icons/arrow.svg);
+          background-size: cover;
+        }
+        &::before {
+          content: "";
+          width: 25px;
+          height: 25px;
+          margin: 0 10px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        &:nth-child(1)::before {
+          background-image: url(../images/settings-icons/color-theem-icon.svg);
+        }
+        &:nth-child(2)::before {
+          background-image: url(../images/settings-icons/font-sizing-icon.svg);
+        }
+        &:nth-child(4)::before {
+          background-image: url(../images/settings-icons/info-icon.svg);
+        }
+        &:nth-child(5)::before {
+          background-image: url(../images/settings-icons/contact-icon.svg);
+        }
+      }
+      li.report::before {
+        background-image: url(../images/settings-icons/report-icon.svg);
+      }
+    }
+  }
+
+  input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--option-border);
+    transition: 0.2s all linear;
+    position: absolute;
+    margin-bottom: 5px;
+    &:checked {
+      border: 6px solid var(--option-color);
+    }
+  }
+
+  label {
+    font-weight: 700;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 35px;
+  }
+
+  h2 {
+    margin: 10px 0;
+  }
+
+  .change-font-size-op {
+    height: 331px;
+    label[for="xl"] {
+      font-size: 1.8rem;
+      padding-bottom: 10px;
+    }
+    label[for="l"] {
+      font-size: 1.5rem;
+      padding-bottom: 7px;
+    }
+    label[for="m"] {
+      position: relative;
+      font-size: 1.125rem;
+      padding-bottom: 5px;
+      &::after {
+        content: "موصى به";
+        position: absolute;
+        font-size: 0.7rem;
+        left: 2%;
+      }
+    }
+    label[for="s"] {
+      font-size: 0.8rem;
+    }
+  }
+
+  .about-app-op {
+    p {
+      line-height: 1.4;
+    }
+    button {
+      cursor: pointer;
+      display: block;
+      margin: 15px auto;
+      width: 200px;
+      height: 40px;
+      color: #dddddd;
+      background-color: #242a33;
+      border: none;
+      border-radius: 10px;
+      font-size: 1em;
+      transition: 0.4s ease-in-out;
+      font-family: inherit;
+      &:hover {
+        filter: contrast(120%);
+      }
+    }
+  }
+
+  .contact-op {
+    form {
+      .sug-menu {
+        margin: 30px auto 20px auto;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 500px;
+        &-select {
+          // appearance: none;
+          position: relative;
+          width: 100%;
+          height: 45px;
+          font-size: 0.9em;
+          border-radius: 15px;
+          padding: 0 10px;
+          background-color: var(--primary-li-4);
+          color: var(--secondary);
+          border: 0;
+          font-family: inherit;
+        }
+        &-icons {
+          position: absolute;
+          top: 0;
+          left: 2px;
+          width: 2.5rem;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          background-color: var(--primary-li-4);
+          border-radius: 15px;
+          pointer-events: none;
+          .barrier {
+            display: block;
+            width: 1px;
+            height: 20px;
+            background-color: var(--secondary);
+            border-radius: 1px;
+          }
+          img {
+            display: block;
+            width: 1.2rem;
+            height: 100%;
+            transform: rotate(270deg);
+          }
+        }
+      }
+      .inputs-cont {
+        height: 200px;
+        input[name="name"] {
+          padding: 10px;
+          margin-bottom: 5px;
+          width: 100%;
+          max-width: 350px;
+          border: none;
+          border-radius: 15px;
+          background-color: var(--primary-li-4);
+          color: var(--secondary);
+          resize: none;
+          font-family: inherit;
+        }
+        textarea {
+          padding: 10px;
+          width: 100%;
+          max-width: 500px;
+          border: none;
+          border-radius: 15px;
+          background-color: var(--primary-li-4);
+          color: var(--secondary);
+          resize: none;
+          font-family: inherit;
+        }
+      }
+      .btn-cont {
+        margin: 15px auto;
+        width: 100%;
+        max-width: 380px;
+        .submit {
+          background-color: var(--secondary) !important;
+          color: var(--primary-li-4) !important;
+          transition: 0.1s !important;
+        }
+        .btn {
+          cursor: pointer;
+          display: block;
+          width: 150px;
+          height: 40px;
+          color: var(--secondary);
+          background-color: var(--primary-li-4);
+          border: none;
+          border-radius: 10px;
+          font-size: 1em;
+          transition: 0.4s ease-in-out;
+          font-family: inherit;
+          // for the div btn
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &:hover {
+            filter: contrast(120%);
+          }
+        }
+      }
+    }
+  }
+
+  #copy-right {
+    margin-top: 180px ;
+    text-align: center;
+    padding: 0 30px;
+    span {
+      text-align: center;
+    }
+  }
+
+}
+

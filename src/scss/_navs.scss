@@ -1,0 +1,112 @@
+.desk-nav-container {
+  margin: 0 auto;
+
+  // Desktop nav
+  .desk-nav {
+    width: 100%;
+    z-index: 12;
+    color: var(--secondary);
+    margin: 5px 15px 0 15px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 0;
+    .nav-wrap{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 15px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 4rem;
+      top: 0;
+      right: 0;
+      z-index: -2;
+      background-color: var(--desk-nav-color);
+      /* offset-x | offset-y | blur-radius | spread-radius | color */
+      box-shadow: 0px -1px 20px 1px rgba(34, 40, 49, 0.452);
+    }
+    &-logo {
+      display: block;
+      margin-top: 8px;
+      max-width: 130px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-links {
+      margin: 0;
+      margin-top: 5px;
+      padding: 0;
+      font-size: 1.1rem;
+      align-items: center;
+      .active {
+        color: #dddddd;
+      }
+      a {
+        margin: 0 20px;
+        color: hsl(0, 0%, 70%);
+        &:hover {
+          color: #dddddd;
+        }
+      }
+      .nav-btns {
+        display: none;
+      }
+      .sign-btns {
+        #signup{
+          display: none;
+        }
+        a {
+          margin: 0;
+          span {
+            color: hsl(0, 0%, 70%);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Mobile Nav
+.mobile-nav {
+  display: block;
+  position: fixed;
+  z-index: 99999;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 60px;
+  background-color: var(--mob-nav-color);
+  padding: 8px 0 10px 0;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0px -1px 10px 0px rgba(34, 40, 49, 0.1);
+  a {
+    color: var(--secondary);
+    flex-direction: column;
+    width: 90px;
+  }
+  span {
+    font-size: 0.9rem;
+  }
+  .icon-container {
+    img {
+      width: 25px;
+      height: 25px;
+      // filter: invert(1);
+    }
+    @keyframes rectFade {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+}

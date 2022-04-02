@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Manifest -->
+    <link rel="manifest" href="./manifest.json">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
+    <title>Athkarok - أذكارك</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YBT0PXQGLT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-YBT0PXQGLT');
+    </script>
+</head>
+
+<body>
+    <!-- Mobile nav -->
+    <nav class="mobile-nav">
+        <div class="flex flex-jc-se flex-ai-c">
+            <a href="/" id="nav-home" class="flex flex-jc-c flex-ai-c">
+                <span class="icon-container"><img id="icon-home" width="25px" src="./images/nav-icons/icon-home.svg"
+                        alt=""></span>
+                <span class="font-s font-w-m">الرئيسية</span>
+            </a>
+            <a href="athkarok.html" id="nav-zikr" class="flex flex-jc-c flex-ai-c">
+                <span class="icon-container"><img id="icon-zikr" width="25px" src="./images/nav-icons/icon-zikr.svg"
+                        alt=""></span>
+                <span class="font-s font-w-m">أذكارك</span>
+            </a>
+            <a href="settings.html" id="nav-share" class="flex flex-jc-c flex-ai-c">
+                <span class="icon-container"><img id="icon-settings" width="25px"
+                        src="./images/nav-icons/icon-settings.svg" alt=""></span>
+                <span class="font-s font-w-m">الإعدادات</span>
+            </a>
+        </div>
+    </nav>
+
+    <header class="desk-nav-container">
+        <nav class="desk-nav">
+            <div class="nav-wrap">
+                <a tabindex="-1" href="/" class="desk-nav-logo"><img src="./images/logo.svg" alt=""></a>
+
+                <div class="desk-nav-links flex flex-jc-sb">
+                    <div class="nav-btns">
+                        <a active="home" href="/" class="">الرئيسية</a>
+                        <a active="athkarok" href="athkarok.html" id="azkarok-nav" class="">أذكارك</a>
+                        <a active="settings" href="settings.html" class="">الإعدادات</a>
+                    </div>
+                    <div class="sign-btns">
+                        <a id="signin" href="signin.html">تسجيل الدخول</a>
+                        <a id="signup" href="signup.html"><span>/</span> التسجيل</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <Main id="indexMain" class="container">
+        <div class="hi-box box relative">
+            <h1 class="font-m font-w-b">
+                <span class="red">أذكارك ،</span>
+                <br> في ليلك ونهارك.
+            </h1>
+            <img id="zikr-rec-img" src="./images/sun.svg" alt="">
+            <div id="btn-wraper">
+                <button id="zikr-rec-btn" class="font-s">
+                    عطر يومك بأذكار
+                </button>
+                <svg id="zikr-rec-btn-icon" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1"
+                    width="512" height="512" x="0" y="0" viewBox="0 0 480.026 480.026"
+                    style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                    <g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path class="icon-fill"
+                                    d="M475.922,229.325l-144-160c-3.072-3.392-7.36-5.312-11.904-5.312h-96c-6.304,0-12.032,3.712-14.624,9.472    c-2.56,5.792-1.504,12.544,2.72,17.216l134.368,149.312l-134.368,149.28c-4.224,4.704-5.312,11.456-2.72,17.216    c2.592,5.792,8.32,9.504,14.624,9.504h96c4.544,0,8.832-1.952,11.904-5.28l144-160    C481.394,244.653,481.394,235.373,475.922,229.325z"
+                                    fill="#ededed" data-original="#000000" />
+                            </g>
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path class="icon-fill"
+                                    d="M267.922,229.325l-144-160c-3.072-3.392-7.36-5.312-11.904-5.312h-96c-6.304,0-12.032,3.712-14.624,9.472    c-2.56,5.792-1.504,12.544,2.72,17.216l134.368,149.312L4.114,389.293c-4.224,4.704-5.312,11.456-2.72,17.216    c2.592,5.792,8.32,9.504,14.624,9.504h96c4.544,0,8.832-1.952,11.904-5.28l144-160    C273.394,244.653,273.394,235.373,267.922,229.325z"
+                                    fill="#ededed" data-original="#000000" />
+                            </g>
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <div class="zikr-shortcut-box box">
+            <button class="zikr-shortcut-btn font-m font-w-b" tabindex="0">أذكار الصباح</button>
+            <button class="zikr-shortcut-btn font-m font-w-b" tabindex="0">أذكار المساء</button>
+            <button class="zikr-shortcut-btn font-m font-w-b" tabindex="0">أذكار المسجد</button>
+            <button class="zikr-shortcut-btn font-m font-w-b" tabindex="0">أذكار النوم</button>
+        </div>
+        <article class="quote-box box">
+            <header class="flex flex-jc-sb flex-ai-c">
+                <h2 class="font-s font-w-m">مقولة اليوم</h2>
+                <div id="share-quote-btn">
+                    <img class="share-icon" src="./images/share-icon.svg" alt="">
+                </div>
+            </header>
+            <blockquote class="font-s">أصبحت من الدنيا راحلا، و للإخوان مفارقا، و لسوء عملي ملاقيا، ولكأس المنية شاربا،و
+                على الله واردا، و لا أدري أروحي تصير إلى الجنة فأهنيها، أم إلى النار فأعزيها.</blockquote>
+            <footer class="font-s"><strong>الإمام الشافعي</strong></footer>
+        </article>
+        <div class="zikr-wheel-box box">
+            <div class="wheel-inner-box flex flex-ai-c flex-jc-se">
+                <div class="wheel-cont">
+                    <svg id="wheel-stroke">
+                        <circle id="cir-stroke" cx="75" cy="75" r="75"></circle>
+                        <circle id="cir-active-stroke" cx="75" cy="75" r="75"></circle>
+                    </svg>
+                    <div class="wheel-ch-cont flex flex-ai-c flex-jc-c">
+                        <button class="wheel flex flex-ai-c flex-jc-c"></button>
+                    </div>
+                </div>
+                <div class="zikr-wheel-list">
+                    <button class="zikr-on-list font-s">سبحان الله</button>
+                    <button class="zikr-on-list font-s">الحمدلله </button>
+                    <button class="zikr-on-list font-s">لا إله إلا الله</button>
+                    <button class="zikr-on-list font-s">الله أكبر</button>
+                </div>
+            </div>
+            <div class="finish-cont flex flex-ai-c flex-jc-sb flex-dir-c">
+                <img src="./images/done.svg" alt="">
+                <h2 class="font-w-b">تم بحمد الله.</h2>
+                <button id="reset-wheel-btn" class="font-s font-w-m btn">إعادة</button>
+            </div>
+        </div>
+        <div class="radio box">
+            <div class="flex flex-ai-c flex-jc-sb">
+                <h2 class="font-w-m">إذاعة القرآن الكريم</h2>
+                <div class="live font-w-m">بث مباشر</div>
+            </div>
+            <div class="radio-menu">
+                <select id="radio-select" class="radio-menu-select">
+                    <option value="1-saudi-radio">إذاعة المملكة العربية السعودية</option>
+                    <option value="2-egypt-radio">إذاعة القاهرة - جمهوية مصر العربية</option>
+                    <option value="3-algeria-radio">إذاعة الجزائر</option>
+                    <option value="4-emirates-radio">إذاعة الإمارات العربية المتحدة</option>
+                </select>
+                <div class="radio-menu-icons">
+                    <span class="barrier"></span>
+                    <img src="./images/settings-icons/arrow.svg" alt="">
+                </div>
+            </div>
+            <div class="radio-btns">
+                <button id="play-btn" aria-label="Play" class="font-s">تشغيل</button>
+                <button id="pause-btn" aria-label="Pause" class="font-s">إيقاف</button>
+            </div>
+        </div>
+        <div class="prayer-times box">
+            <div class="flex flex-ai-c flex-jc-sb">
+                <h2 class="font-s font-w-m">مواقيت الصلاة</h2>
+                <span class="postion">
+                    <span id="contry">---</span>
+                    <span>، </span>
+                    <span id="county">----</span>
+                    <span>، </span>
+                    <span id="city">-----</span>
+                </span>
+            </div>
+            <div class="date">
+                <span id="day">--</span>
+                <span>، </span>
+                <span id="day-num">--</span>
+                <span>من</span>
+                <span id="month">--</span>
+                <span>عام</span>
+                <span id="year">--</span>
+                <span>هجريًا.</span>
+            </div>
+            <div class="prayer">
+                <span class="font-s font-w-m">الفجر</span>
+                <span>
+                    <span id="fajr-time">-:--</span>
+                </span>
+            </div>
+            <div class="prayer">
+                <span class="font-s font-w-m">شروق الشمس</span>
+                <span>
+                    <span id="sunrise-time">-:--</span>
+                </span>
+            </div>
+            <div class="prayer">
+                <span class="font-s font-w-m">الظهر</span>
+                <span>
+                    <span id="dhuhr-time">-:--</span>
+                </span>
+            </div>
+            <div class="prayer">
+                <span class="font-s font-w-m">العصر</span>
+                <span>
+                    <span id="asr-time">-:--</span>
+                </span>
+            </div>
+            <div class="prayer">
+                <span class="font-s font-w-m">المغرب</span>
+                <span>
+                    <span id="maghrib-time">-:--</span>
+                </span>
+            </div>
+            <div class="prayer">
+                <span class="font-s font-w-m">العشاء</span>
+                <span>
+                    <span id="isha-time">-:--</span>
+                </span>
+            </div>
+        </div>
+        <div class="ask-loc box">
+            <p class="font-w-b">قم بالضغط لتفعيل خدمة الموقع والوصول إلى مواقيت الصلاة.</p>
+        </div>
+    </Main>
+
+    <div style="position: fixed;top: 0;right: 0; width: 100%;height: 100vh;" class="app-loader">
+        <div class="app-loader-content">
+            <img src="./images/logo.svg" alt="">
+            <div class="progress">
+                <span class="progress-inner"></span>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

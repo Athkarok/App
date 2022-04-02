@@ -1,0 +1,105 @@
+// Break points
+$breakpoint-L: 1000px;
+$breakpoint-M: 782px;
+$breakpoint-S: 480px;
+
+
+@media (min-width: $breakpoint-M) {
+  .container {
+    padding-top: 100px;
+    max-width: 70%;
+  }
+
+  // Desk nav
+  .desk-nav-container {
+    .desk-nav {
+      padding-top: 5px;
+      padding: 5px 25px 0 25px;
+      max-width: 90%;
+      transform: translateX(-5vw);
+      &-logo {
+        margin-top: 5px;
+        max-width: 150px;
+      }
+      &-links {
+        width: 100%;
+        .nav-btns {
+          display: block;
+        }
+        .sign-btns {
+          #signup{
+            display: inline;
+          }
+        }
+      }
+    }
+    .desk-nav::before {
+      height: 4.55rem;
+      border-radius: 0 0 10px 10px;
+    }
+  }
+
+  // Mob nav
+  .mobile-nav {
+    display: none;
+  }
+
+  .done {
+    // display: flex !important;
+    height: 100% !important;
+    padding: 50px 0 !important;
+    .done-text {
+      margin-bottom: 10px !important;
+    }
+    img {
+      max-width: 10% !important;
+    }
+  }
+
+  .dalel-card {
+    margin: 0;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: $breakpoint-L) {
+  .container {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: $breakpoint-M) {
+  body {
+    main{
+      padding-bottom: 100px;
+    }
+  }
+  // signin
+  #signInMain {
+    .right {
+      display: none;
+    }
+    .left {
+      width: 100%;
+      .g-sign-in-button {
+        width: 65%;
+      }
+      #signinForm {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-S) {
+  #signInMain {
+    .left {
+      .g-sign-in-button {
+        width: 85%;
+      }
+      #signinForm {
+        width: 85%;
+      }
+    }
+  }
+}

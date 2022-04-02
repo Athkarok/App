@@ -1,0 +1,299 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
+  background-color: var(--primary);
+  font-family: $primary-font;
+  color: var(--text-color);
+  overflow-x: hidden;
+  position: relative;
+}
+
+li {
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+input, button {
+  font-family: inherit !important;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+input,
+textarea,
+button,
+select,
+a,
+div {
+  -webkit-tap-highlight-color: transparent;
+}
+
+*:focus {
+  outline: 0 !important;
+}
+
+*::selection {
+  background: var(--selection); /* WebKit/Blink Browsers */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+// scroll style *FireFox dose not support custom scroll styles
+
+// width
+::-webkit-scrollbar {
+  width: 5px;
+}
+// Track
+::-webkit-scrollbar-track {
+  background: var(--primary);
+}
+// Handle
+::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border-radius: 50px;
+}
+// Handle on hover
+::-webkit-scrollbar-thumb:hover {
+  background: var(--thumb-hover);
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+
+  &-dir-c {
+    flex-direction: column;
+  }
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+  &-jc-se {
+    justify-content: space-evenly;
+  }
+  &-jc-sa {
+    justify-content: space-around;
+  }
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+.font {
+  // Sizes
+  &-xl {
+    font-size: $font-xl;
+  }
+  &-l {
+    font-size: $font-l;
+  }
+  &-m {
+    font-size: $font-m;
+  }
+  &-s {
+    font-size: $font-s;
+  }
+
+  // Thikcnies
+
+  &-w-b {
+    font-weight: 700;
+  }
+
+  &-w-m {
+    font-weight: 500;
+  }
+
+  &-w-s {
+    font-weight: 200;
+  }
+}
+
+.red {
+  color: var(--red);
+}
+
+.relative {
+  position: relative;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.none {
+  display: none;
+}
+
+.block{
+  display: block !important;
+}
+
+.w100{
+  width: 100%;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+main.container {
+  padding-top: 95px;
+}
+
+.canvas-container {
+  width: 1000px;
+  height: 683px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../images/share-temp.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 20px 20px 80px 20px;
+  text-align: center;
+  line-height: 1.6;
+  color: #222831;
+  font-family: inherit;
+
+  position: fixed;
+  top: -700px;
+  .canvas-text {
+    font-size: 40px;
+    font-weight: 400;
+  }
+  .canvas-author {
+    font-size: 35px;
+    font-weight: 700;
+  }
+}
+
+.app-loader {
+  position: relative;
+  direction: ltr;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  background-color: #222831;
+  .app-loader-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    img {
+      width: 50%;
+      max-width: 250px;
+    }
+    .progress {
+      border-radius: 3px;
+      position: relative;
+      width: 60%;
+      max-width: 500px;
+      height: 5px;
+      color: var(--white);
+      background-color: var(--dark-white);
+      &-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        max-width: 500px;
+        height: 5px;
+        background-color: var(--white);
+        border-radius: inherit;
+      }
+    }
+  }
+}
+
+.btn {
+  cursor: pointer;
+  display: block;
+  margin: 15px auto;
+  width: 200px;
+  height: 40px;
+  color: var(--secondary);
+  background-color: var(--primary-li-4);
+  border: none;
+  border-radius: 10px;
+  font-size: 1em;
+  transition: 0.4s ease-in-out;
+  font-family: inherit;
+  // to center if div btn
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    filter: contrast(120%);
+  }
+}
+
+.ui.form{
+
+  .ui.message .header {
+    font-family: inherit !important;
+  }
+  
+  .ui.error.message {
+    .header {
+      color: var(--red);
+    }
+    background-color: var(--input);
+    color: var(--red);
+    border-radius: 8px;;
+  }
+}

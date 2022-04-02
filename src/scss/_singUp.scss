@@ -1,0 +1,34 @@
+#signUpMain {
+  .form-cont {
+    margin: 0 auto;
+    max-width: 85%;
+    margin-top: 20px;
+    h2 {
+      font-family: inherit;
+      color: var(--secondary);
+    }
+    label {
+      color: var(--secondary);
+    }
+    button {
+      color: var(--primary);
+      background: var(--secondary);
+      display: block;
+      margin: 10px auto;
+      width: 50%;
+      &:hover {
+        filter: contrast(1.1);
+      }
+    }
+    input {
+      color: var(--secondary);
+      background: var(--input);
+    }
+
+    input:autofill {
+      -webkit-box-shadow: 0 0 0 100px var(--primary-li-4) inset !important;
+      box-shadow: 0 0 0 100px var(--primary-li-4) inset !important;
+      border-color: var(--secondary-li-65) !important;
+    }
+  }
+}
